@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8" />
+        <title>Banco PIP</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <script src="codigo.js"></script>
+        <h1 class="h1"> Elejir transacción</h1>
+        <header class="header">
+            <div class="header-deposito">
+                <div class="header-img">
+                    <section id="contenedor"></section>
+                    <a id="cont" href="javascript:abrir3()"><img width="200px" src="img2/deposito.png" id="img-depo"  class="menu-ic" alt=""></a>
+                    <label id="l1" for="cont"><h2>Depositos</h2></label>
+                </div>
+            </div>
+        </div>
+        <div class="header-retiro">
+            <div class="header-img2">
+                <section id="contenedor2"></section>
+               <a id="cont2" href="javascript:abrir2()"> <img width="200px" src="img2/retiro.png" id="img-reti"  class="menu-id" alt=""></a>
+               <label id="l2" for="cont"><h2>Retiros</h2></label>
+            </div>
+        </div>
+        <br>
+        <div class="header-consulta">
+            <div class="header-img3">
+                <nav>
+                    <section id="contenedor3"></section>
+               <a id="cont3" href="javascript:abrir()"><img width="200px" src="img2/consulta.webp" id="img-consu"  class="menu-ie" alt=""></a>
+               <label id="l3" for="cont"><h2>Consulta</h2></label>
+               </nav>
+            </div>
+        </div>
+        <div class="header-salida">
+            <div class="header-img4">
+               <a id="cont4" href="index.html"><img width="200px" src="img2/salida.png" id="img-sal"  class="menu-if" alt=""></a>
+               <label id="l4" for="cont"><h2>Salida</h2></label>
+            </div>
+        </div>
+        </div>
+        </header>
+    </script>
+    <div class="ventana3" id="vent3">
+        <div id="cerrar"><a href="javascript:cerrar3()"><img width="25" src="img2/exit.png" alt=""></a></div>
+        <section class="forrmularios-R">
+            <h1>Datos Cliente</h1>
+            <form id="form3" action='' method="post" onsubmit="return validarDeposito(event)">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="depo">Monto a depositar:</label>
+                <input type="text" id="depoInput" name="depo" pattern="[0-9]*" placeholder="Ingrese solo números" required><br><br>
+
+                <label for="tarjeta">Número de Tarjeta de Crédito:</label>
+                <input type="text" id="tarjeta" name="tarjeta" pattern="[0-9]*" placeholder="Ingrese solo números" required><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </div>
+    <div class="ventana2" id="vent2">
+            <div id="cerrar"><a href="javascript:cerrar2()"><img width="25" src="img2/exit.png" alt=""></a></div>
+            <section class="forrmularios-R">
+                <div class="ingresoR">
+                    <h3> Rellenar las casillas</h3>
+                    <form id="form2" action='' method="post" onsubmit="return validarRetiro(event)">
+                        <label for="reti">Monto a retirar:</label>
+                        <input type="text" id="reti" name="reti" pattern="[0-9]*" placeholder="Ingrese solo números" required><br><br>
+            
+                        <label for="cedu">Número de cedula:</label>
+                        <input type="text" id="cedu" name="cedu" pattern="[0-9]*" placeholder="Ingrese solo números" required><br><br>
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </section>
+        </div>
+    <div class="ventana" id="vent">
+        <div id="cerrar"><a href="javascript:cerrar()"><img width="25" src="img2/exit.png" alt=""></a></div>
+        <header class="forrmularios-R">
+    <div class="ingresoR">
+        <h3> Consulta de saldos</h3>
+        <form id="form" action='' method="post" onsubmit="return consultasaldos(event)">
+            <label for="cedu2">Número de cedula:</label>
+            <input type="text" id="cedu2" name="cedu2" pattern="[0-9]*" placeholder="Ingrese solo números" required><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    </body>    
+</html>
